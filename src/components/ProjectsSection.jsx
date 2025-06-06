@@ -6,7 +6,7 @@ const projects = [
     title: "Spotify Hits Analysis",
     description:
       "End-to-end data analysis and machine learning project using the Top Spotify Tracks. Focused on data preprocessing, classification, clustering, and model evaluation.",
-    image: '/sptify.jpg',
+    image: '/spotify.jpg',
     tags: ["Python", "Pandas", "scikit-learn", "EDA", "Clustering", "Classification"],
     demoUrl: "#",
     githubUrl: "#",
