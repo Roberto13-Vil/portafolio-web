@@ -49,6 +49,7 @@ export const ProjectsSection = () => {
                   alt={project.title}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
+                console.log(project.image)
               </div>
 
               <div className="p-6">
