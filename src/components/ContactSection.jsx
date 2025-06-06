@@ -10,18 +10,43 @@ export const ContactSection = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    setTimeout(() => {
-      toast({
-        title: "Message sent!",
-        description: "Thank you for your message. I’ll get back to you soon...",
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    try {
+      const res = await fetch("https://formsubmit.co/robertvilchis787@gmail.com", {
+        method: "POST",
+        body: formData,
       });
-      setIsSubmitting(false);
-      e.currentTarget.reset();
-    }, 1500);
+
+      if (res.ok) {
+        toast({
+          title: "Message sent!",
+          description: "Thank you for your message. I’ll get back to you soon...",
+        });
+        form.reset();
+      } else {
+        toast({
+          title: "Error",
+          description: "Something went wrong. Please try again later.",
+          variant: "destructive",
+        });
+      }
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Unable to send message. Please check your connection.",
+        variant: "destructive",
+      });
+    }
+
+    setIsSubmitting(false);
   };
+
 
   return (
     <section id="contact" className="py-24 px-6 md:px-12 relative bg-secondary/30">
@@ -98,11 +123,12 @@ export const ContactSection = () => {
             <h3 className="text-2xl font-semibold mb-6">Send a Message</h3>
             <form
               onSubmit={handleSubmit}
-              action="https://formsubmit.co/robertvilchis787@gmail.com"
-              method="POST"
               className="space-y-6"
-              target="_blank"
             >
+              {/* Hidden inputs */}
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_template" value="table" />
+
               <div>
                 <label htmlFor="name" className="block text-sm font-medium mb-2">
                   Your Name
@@ -149,7 +175,11 @@ export const ContactSection = () => {
 
               <button
                 type="submit"
-                className="cosmic-button w-full flex items-center justify-center gap-2 transition-transform"
+                disabled={isSubmitting}
+                className={cn(
+                  "cosmic-button w-full flex items-center justify-center gap-2 transition-transform",
+                  isSubmitting && "opacity-50"
+                )}
               >
                 {isSubmitting ? "Sending..." : "Send Message"} <Send size={16} />
               </button>
