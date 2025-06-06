@@ -149,11 +149,7 @@ export const ContactSection = () => {
 
               <button
                 type="submit"
-                disabled={isSubmitting}
-                className={cn(
-                  "cosmic-button w-full flex items-center justify-center gap-2 transition-transform",
-                  isSubmitting && "opacity-50"
-                )}
+                className="cosmic-button w-full flex items-center justify-center gap-2 transition-transform"
               >
                 {isSubmitting ? "Sending..." : "Send Message"} <Send size={16} />
               </button>
