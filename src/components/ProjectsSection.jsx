@@ -1,60 +1,103 @@
-import { ArrowRight, ExternalLink, Github } from "lucide-react";
+import { ArrowRight, ExternalLink } from "lucide-react";
 
-const projects = [
+const approaches = [
   {
     id: 1,
-    title: "Spotify Hits Analysis",
+    title: "Predictive Modeling & Unsupervised Learning",
     description:
-      "End-to-end data analysis and machine learning project using the Top Spotify Tracks. Focused on data preprocessing, classification, clustering, and model evaluation.",
-    image: '/spotify.jpg',
-    tags: ["Python", "Pandas", "scikit-learn", "EDA", "Clustering", "Classification"],
-    demoUrl: "#",
-    githubUrl: "#",
+      "Build classification, regression, and clustering models to solve real-world problems—from sales forecasting to customer segmentation.",
+    tags: ["Regression", "Classification", "Clustering", "scikit-learn", "XGBoost"],
+    difficulty: "Intermediate – Advanced",
+    numProjects: 10,
+    demoUrl: "/approaches/predictive-modeling",
+    image: "/ml_predictive.png",
   },
   {
     id: 2,
-    title: "Forecasting Life Expectancy in Mexico",
+    title: "Natural Language Processing (NLP)",
     description:
-      "Time series analysis focused on predicting Mexico's life expectancy using historical data. Applied data cleaning, visualization, and forecasting with ARIMA.",
-    image: '/life_expectancy.jpg',
-    tags: ["Python", "Time Series", "ARIMA", "Pandas", "Statsmodels"],
-    demoUrl: "#",
-    githubUrl: "#",
+      "Work with text to extract insights, detect sentiment, classify content, and build intelligent systems using embeddings and transformers.",
+    tags: ["BERT", "Transformers", "spaCy", "HuggingFace", "Sentiment Analysis"],
+    difficulty: "Intermediate – Advanced",
+    numProjects: 10,
+    demoUrl: "/approaches/nlp",
+    image: "/nlp_analysis.jpg",
+  },
+  {
+    id: 3,
+    title: "Data Visualization & Communication",
+    description:
+      "Transform complex data into clear and powerful visuals. Ideal for dashboards, data storytelling, and executive presentations.",
+    tags: ["Plotly", "Seaborn", "Streamlit", "Dashboards", "Storytelling"],
+    difficulty: "Beginner – Intermediate",
+    numProjects: 8,
+    demoUrl: "/approaches/visualization",
+    image: "/data_viz.jpg",
+  },
+  {
+    id: 4,
+    title: "Audio Processing & Intelligent Interfaces",
+    description:
+      "Extract audio features like spectrograms and MFCCs to classify sounds, detect keywords, or build smart interfaces like Alexa.",
+    tags: ["MFCC", "Spectrogram", "CNN", "RNN", "librosa"],
+    difficulty: "Intermediate – Advanced",
+    numProjects: 10,
+    demoUrl: "/approaches/audio",
+    image: "/audio_ai.jpg",
+  },
+  {
+    id: 5,
+    title: "Geospatial Data Science",
+    description:
+      "Analyze spatial data to uncover geographic patterns—urban mobility, risk zones, or resource distribution.",
+    tags: ["GeoPandas", "Folium", "Kepler.gl", "OpenStreetMap", "Maps"],
+    difficulty: "Intermediate",
+    numProjects: 8,
+    demoUrl: "/approaches/geospatial",
+    image: "/geospatial.jpg",
+  },
+  {
+    id: 6,
+    title: "Multifocus End-to-End Projects",
+    description:
+      "Projects that combine multiple techniques: from data cleaning to deployment, integrating NLP, audio, visualization, and fairness.",
+    tags: ["EDA", "ML", "NLP", "Audio", "API", "Dashboard", "MLOps"],
+    difficulty: "Advanced",
+    numProjects: 5,
+    demoUrl: "/approaches/integrated",
+    image: "/multienfoque.jpg",
   },
 ];
 
-export const ProjectsSection = () => {
+export const ApproachesSection = () => {
   return (
-    <section id="projects" className="py-24 px-4 relative">
+    <section id="approaches" className="py-24 px-4 relative">
       <div className="container mx-auto max-w-5xl">
         <h2 className="text-3xl md:text-4xl font-bold text-center">
-          Featured <span className="text-primary">Projects</span>
+          Featured <span className="text-primary">Approaches</span>
         </h2>
         <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-          These are some of the projects I've worked on. Each one challenged me in different
-          ways and helped shape my skills as a data scientist. I’m passionate about solving
-          complex problems and turning data into meaningful insights through effort, curiosity,
-          and persistence.
+          These are the main learning paths I’ve explored as a data scientist. Each approach
+          focuses on a key area of expertise and includes hands-on projects using real-world data.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project) => (
+          {approaches.map((approach) => (
             <div
-              key={project.id}
+              key={approach.id}
               className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover"
             >
               <div className="h-48 overflow-hidden">
                 <img
-                  src={project.image}
-                  alt={project.title}
+                  src={approach.image}
+                  alt={approach.title}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
-                console.log(project.image)
               </div>
 
               <div className="p-6">
                 <div className="flex flex-wrap gap-2 mb-4">
-                  {project.tags.map((tag, index) => (
+                  {approach.tags.map((tag, index) => (
                     <span
                       key={index}
                       className="px-2 py-1 text-xs font-medium border rounded-full bg-primary/15 text-secondary-foreground"
@@ -63,27 +106,22 @@ export const ProjectsSection = () => {
                     </span>
                   ))}
                 </div>
-              </div>
 
-              <h3 className="text-xl font-semibold mb-1">{project.title}</h3>
-              <p className="text-muted-foreground text-sm mb-4">{project.description}</p>
+                <h3 className="text-xl font-semibold mb-1">{approach.title}</h3>
+                <p className="text-muted-foreground text-sm mb-2">{approach.description}</p>
+                <p className="text-xs text-muted-foreground mb-1">
+                  <strong>Difficulty:</strong> {approach.difficulty}
+                </p>
+                <p className="text-xs text-muted-foreground mb-4">
+                  <strong>Suggested Projects:</strong> {approach.numProjects}
+                </p>
 
-              <div className="flex justify-between items-center">
-                <div className="flex space-x-3">
+                <div className="flex justify-between items-center">
                   <a
-                    href={project.demoUrl}
-                    target="_blank"
+                    href={approach.demoUrl}
                     className="text-foreground/80 hover:text-primary transition-colors duration-300"
                   >
-                    <ExternalLink size={25} />
-                  </a>
-
-                  <a
-                    href={project.githubUrl}
-                    target="_blank"
-                    className="text-foreground/80 hover:text-primary transition-colors duration-300"
-                  >
-                    <Github size={25} />
+                    <ExternalLink size={22} />
                   </a>
                 </div>
               </div>
@@ -104,3 +142,4 @@ export const ProjectsSection = () => {
     </section>
   );
 };
+
