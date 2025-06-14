@@ -22,7 +22,7 @@ export const HeroSection = () => {
 
           <div className="pt-4 opacity-0 animate-fade-in-delay-4">
             <a
-              href="#projects"
+              href="#approaches"
               className="cosmic-button hover:scale-105 transition-transform"
             >
               View My Work
