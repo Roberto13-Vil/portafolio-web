@@ -4,7 +4,7 @@ import { StarBackground } from "@/components/StarBackground";
 
 const Project_1 = () => {
   return (
-    <>
+    <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
       {/* Theme Toggle */}
       <ThemeToggle />
       {/* Background Effects */}
@@ -42,7 +42,7 @@ const Project_1 = () => {
 
         <Link className="inline-block mt-6 text-blue-300 underline" to="/">← Back to Portfolio</Link>
       </main>
-    </>
+    </div>
   );
 };
 
