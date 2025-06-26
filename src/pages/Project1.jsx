@@ -1,46 +1,84 @@
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import { ThemeToggle } from "../components/ThemeToggle";
 import { StarBackground } from "@/components/StarBackground";
+import { Navbar } from "../components/Navbar";
 
 const Project_1 = () => {
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
-      {/* Theme Toggle */}
       <ThemeToggle />
-      {/* Background Effects */}
       <StarBackground />
-
-      {/* Navbar */}
       <Navbar />
-      {/* Main Content */}
-      <main className="p-8 max-w-4xl mx-auto text-white">
-        <h1 className="text-3xl font-bold mb-4">Forecasting with SARIMA</h1>
-        <p className="mb-4">
-          This project uses time series analysis on climate data from NOAA to build and validate a SARIMA model.
-          I conducted EDA, decomposition, stationarity tests, and animated the forecast evolution over time.
+
+      <main className="p-8 max-w-5xl mx-auto">
+        <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-gradient mb-6">
+          📈 Forecasting Climate with SARIMA
+        </h1>
+
+        <p className="text-muted-foreground text-lg md:text-xl mb-8">
+          This project applies time series analysis to NOAA climate data. From exploratory
+          analysis and statistical testing to modeling and forecasting, the entire process
+          is captured with visual tools and animations.
         </p>
 
-        <h2 className="text-xl font-semibold mt-6 mb-2">Key Highlights:</h2>
-        <ul className="list-disc list-inside space-y-1">
-          <li>📊 Exploratory Data Analysis (EDA)</li>
-          <li>🧪 Levene & ADF stationarity tests</li>
-          <li>🧠 STL Decomposition</li>
-          <li>📈 Model fitting and prediction</li>
-          <li>🎞️ Animated GIF forecast visualization</li>
-          <li>📁 Data saved in Parquet format</li>
-        </ul>
+        <section className="mb-10">
+          <h2 className="text-2xl font-semibold mb-3 text-primary">🔍 Key Highlights</h2>
+          <ul className="list-disc list-inside space-y-2 text-muted-foreground">
+            <li>EDA with custom visual themes</li>
+            <li>Variance and stationarity testing (Levene & ADF)</li>
+            <li>STL decomposition to separate trend/seasonality</li>
+            <li>SARIMA model training and evaluation</li>
+            <li>Prediction visualization as animated GIF</li>
+            <li>Data stored in Parquet format for reproducibility</li>
+          </ul>
+        </section>
 
-        <h2 className="text-xl font-semibold mt-6 mb-2">Screenshots / Visuals</h2>
-        <img src="/sarima-gif.gif" alt="Animated Forecast" className="rounded-xl shadow-lg my-4" />
-        <img src="/stl-decomposition.png" alt="STL Decomposition" className="rounded-xl shadow-lg my-4" />
+        <section className="mb-10">
+          <h2 className="text-2xl font-semibold mb-3 text-primary">🖼️ Visuals</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <img
+              src="/sarima-gif.gif"
+              alt="Animated Forecast"
+              className="rounded-xl shadow-lg border border-muted"
+            />
+            <img
+              src="/stl-decomposition.png"
+              alt="STL Decomposition"
+              className="rounded-xl shadow-lg border border-muted"
+            />
+          </div>
+        </section>
 
-        <h2 className="text-xl font-semibold mt-6 mb-2">Links</h2>
-        <ul className="list-disc list-inside space-y-1">
-          <li><a className="text-blue-400 underline" href="https://github.com/tuusuario/sarima-project" target="_blank">GitHub Repo</a></li>
-          <li><a className="text-blue-400 underline" href="/notebooks/predicciones.html" target="_blank">Notebook (HTML version)</a></li>
-        </ul>
+        <section className="mb-10">
+          <h2 className="text-2xl font-semibold mb-3 text-primary">🔗 Resources</h2>
+          <ul className="list-disc list-inside space-y-2 text-muted-foreground">
+            <li>
+              <a
+                className="underline text-blue-400 hover:text-blue-300"
+                href="https://github.com/tuusuario/sarima-project"
+                target="_blank"
+              >
+                GitHub Repository
+              </a>
+            </li>
+            <li>
+              <a
+                className="underline text-blue-400 hover:text-blue-300"
+                href="/notebooks/predicciones.html"
+                target="_blank"
+              >
+                View Notebook (HTML)
+              </a>
+            </li>
+          </ul>
+        </section>
 
-        <Link className="inline-block mt-6 text-blue-300 underline" to="/">← Back to Portfolio</Link>
+        <Link
+          to="/"
+          className="inline-block mt-8 text-blue-300 underline hover:text-blue-200 transition-colors"
+        >
+          ← Back to Portfolio
+        </Link>
       </main>
     </div>
   );
