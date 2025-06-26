@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { ThemeToggle } from "../components/ThemeToggle";
 import { StarBackground } from "@/components/StarBackground";
-import { Navbar } from "../components/Navbar";
+import { Footer } from "../components/Footer";
 
 const Project_1 = () => {
   return (
@@ -110,6 +110,7 @@ const Project_1 = () => {
         </Link>
 
       </main>
+      <Footer />
     </div>
   );
 };

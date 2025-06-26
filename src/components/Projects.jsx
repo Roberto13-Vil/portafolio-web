@@ -8,7 +8,7 @@ const projects = [
       "Time series analysis project using real climate data from NOAA. Includes full EDA, model diagnostics, residual tests, and dynamic prediction visualization with SARIMA. Emphasis on interpretability and animated forecasting.",
     image: "/project_1.jpg",
     tags: ["Python", "Pandas", "SARIMA", "Time Series", "EDA", "Forecasting", "Statsmodels", "Visualization"],
-    demoUrl: "/project_1",
+    demoUrl: "/project-1",
     githubUrl: "https://github.com/Roberto13-Vil/SARIMA-Forcasting",
 },
   
