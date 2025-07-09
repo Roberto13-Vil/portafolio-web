@@ -10,8 +10,17 @@ const projects = [
     tags: ["Python", "Pandas", "SARIMA", "Time Series", "EDA", "Forecasting", "Statsmodels", "Visualization"],
     demoUrl: "/project-1",
     githubUrl: "https://github.com/Roberto13-Vil/SARIMA-Forcasting",
-},
-  
+  },
+  {
+    id: 2,
+    title: "Interactive Dashboard - Incidents in Mexico",
+    description:
+      "An interactive dashboard to explore incidents across states, municipalities, and types of crimes. This project showcases data processing with Dask, visualization with Streamlit, and deployment skills.",
+    image: "/project_2.jpg",
+    tags: ["Python", "Dask", "Streamlit", "EDA", "Visualization", "Deployment"],
+    demoUrl: "/project-2",
+    githubUrl: "https://github.com/Roberto13-Vil/Interactive-Dashboard",
+  },
 ];
 
 export const ProjectsSection = () => {
