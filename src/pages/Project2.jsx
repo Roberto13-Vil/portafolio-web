@@ -29,7 +29,9 @@ const Project_2 = () => {
 
         <p className="max-w-3xl mx-auto text-muted-foreground mb-10 leading-relaxed">
           <span className="text-primary font-semibold">Overview:</span><br />
-          This project demonstrates the use of Dask for handling large datasets (~22 million rows) that cannot be easily managed with pandas or polars in memory. It features an interactive dashboard built with Streamlit to explore incident data by state, municipality, and type of crime.
+          This project demonstrates the use of Dask for handling large datasets (~22 million rows) that cannot be easily managed with pandas or polars in memory. It features an interactive dashboard built with Streamlit to explore incident data by state, municipality, and type of crime. 
+          Built with a focus on data processing, visualization, and deployment, this project showcases my ability to create scalable and user-friendly data applications. And in the dashboard, users can filter incidents by date, state, municipality, type of crime, and modality, providing a comprehensive view of public security incidents in Mexico. 
+          The dataset on the dashboard is reduced to 1 million rows for performance, but the full dataset is available in the GitHub repository.
         </p>
 
         <section className="mb-12">
@@ -96,7 +98,7 @@ const Project_2 = () => {
             <li>
               <a
                 className="underline text-blue-400 hover:text-blue-300"
-                href=""
+                href="https://interactive-dashboard-robert.streamlit.app"
                 target="_blank"
                 rel="noopener noreferrer"
               >
