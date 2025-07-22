@@ -21,6 +21,16 @@ const projects = [
     demoUrl: "/project-2",
     githubUrl: "https://github.com/Roberto13-Vil/Interactive-Dashboard",
   },
+  {
+  id: 3,
+  title: "Text Classifier - Suicide Reddit Posts",
+  description:
+    "Analyzed a dataset from Kaggle containing Reddit posts labeled for suicidal content. This project demonstrates text preprocessing, exploratory data analysis (EDA), and the development of a basic classification model. The model is deployed and can be tested through a web interface.",
+  image: "/project_3.jpg",
+  tags: ["NLP", "Classification", "Text Processing", "EDA", "Visualization", "Deployment"],
+  demoUrl: "/project-3",
+  githubUrl: "https://github.com/Roberto13-Vil/mental-health-text-classification",
+},
 ];
 
 export const ProjectsSection = () => {
