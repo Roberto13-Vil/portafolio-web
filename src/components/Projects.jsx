@@ -36,7 +36,7 @@ const projects = [
   title: "Churn Prediction - Telecom Customers",
   description:
     "Built a classification model to predict customer churn using a telecom dataset from Iran. Includes feature engineering, model training with PyTorch, and an interactive dashboard. This project helps identify churn risk to guide retention strategies.",
-  image: "/project_4",
+  image: "/project_4.jpg",
   tags: ["Deep Learning", "Classification", "Churn", "EDA", "Visualization", "Streamlit"],
   demoUrl: "/project-4",
   githubUrl: "https://github.com/Roberto13-Vil/churn_predictive",
