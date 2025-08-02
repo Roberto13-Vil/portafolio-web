@@ -30,7 +30,18 @@ const projects = [
   tags: ["NLP", "Classification", "Text Processing", "EDA", "Visualization", "Deployment"],
   demoUrl: "/project-3",
   githubUrl: "https://github.com/Roberto13-Vil/mental-health-text-classification",
-},
+  },
+  {
+  id: 4,
+  title: "Churn Prediction - Telecom Customers",
+  description:
+    "Built a classification model to predict customer churn using a telecom dataset from Iran. Includes feature engineering, model training with PyTorch, and an interactive dashboard. This project helps identify churn risk to guide retention strategies.",
+  image: "/project_4",
+  tags: ["Deep Learning", "Classification", "Churn", "EDA", "Visualization", "Streamlit"],
+  demoUrl: "/project-4",
+  githubUrl: "https://github.com/Roberto13-Vil/churn_predictive",
+}
+
 ];
 
 export const ProjectsSection = () => {
